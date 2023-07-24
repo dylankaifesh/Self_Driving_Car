@@ -1,11 +1,18 @@
 class Controls{
-    constructor(){
+    constructor(type){
         this.forward=false;
         this.left=false;
         this.right=false;
         this.reverse=false;
 
-        this.#addKeyboardListeners();  //'#' means the variable is private
+        switch(type){
+            case "KEYS":
+                this.#addKeyboardListeners(); //'#' means the variable is private
+                break;
+            case "DUMMY":
+                this.forward=true;
+                break;
+        }  
     }
     #addKeyboardListeners(){
         document.onkeydown=(event)=>{  //the '=>' allows the 'this' function to still refer to the constructor function and not the #addKeyboardListeners funtion
