@@ -31,6 +31,5 @@ function animate(){
     requestAnimationFrame(animate);
 }
 
-//56:57
-// 1:09:49
+//1:53:40
 // Fix the sensors to add black collisions
