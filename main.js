@@ -8,7 +8,7 @@ const car=new Car(road.getLaneCenter(1),100,30,50);
 animate();
 
 function animate(){
-    car.update();
+    car.update(road.borders);
     
     canvas.height=window.innerHeight;
 
@@ -21,3 +21,7 @@ function animate(){
     ctx.restore();
     requestAnimationFrame(animate);
 }
+
+//56:57
+// 1:09:49
+// Fix the sensors to add black collisions
